@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
 
 
+
 /* 
 ================================
 Variables
@@ -11,6 +12,7 @@ Variables
     /* Primary */
     --moderate-violet: hsl(263, 55%, 52%);
     --moderate-violet-1: hsl(263, 90%, 76%);
+    --moderate-violet-2: hsla(263, 90%, 76%, 0.1);
     --dark-grayish-blue: hsl(217, 19%, 35%);
     --dark-blackish-blue: hsl(219, 29%, 14%);
     --white: hsl(0, 0%, 100%);
@@ -23,6 +25,8 @@ Variables
     --light-grayish-blue: hsl(210, 46%, 95%);
 
     --border-radius: 0.75rem;
+
+    --font-family: 'Barlow Semi Condensed', sans-serif;
     
 }
 
@@ -89,14 +93,15 @@ img {
 main {
     display: grid;
     justify-items: center;
-
+    
 }
 .card-container {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     max-width: 370px;
     width: 100%;
     display:grid;
     grid-template-columns: 1fr;
+    gap: 30px;
 }
 
 .review-card {
@@ -108,16 +113,34 @@ main {
     border-radius: var(--border-radius);
     /* padding: 0.5rem 2rem; */
     padding: 0 2rem;
-
+    
 }
+
 .purple-card {
     background: var(--moderate-violet);
 }
 
+.grey-card {
+    background: var(--dark-grayish-blue);
+}
+
+.white-card {
+    background: var(--white);
+}
+
+.white-card .card-title {
+    color: var(--dark-blackish-blue);
+}
+.white-card .card-details {
+    color: var(--dark-blackish-blue)
+}
+.dark-gray-card {
+    background-color: var(--dark-grayish-blue);
+}
 /* Person */
 .person-details {
     display: flex;
-    border: 2px blue solid;
+    /* border: 2px blue solid; */
     margin-top: 2rem;
     /* margin-left: 0.5rem; */
     /* align-items: center; */
@@ -164,7 +187,7 @@ main {
 
 .card-title {
     /* margin: 1rem; */
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     color: var(--light-grayish-blue);
     font-size: 1.35rem;
     /* margin: 0 20px; */
@@ -174,11 +197,58 @@ main {
     /* white-space: nowrap; */
     padding: 0.75rem;
     max-width: 80%;
+    font-weight: 500;
     
 }
 
 .card-details {
     color: var(--light-gray-7);
-    border: 2px solid greenyellow;
+    /* border: 2px solid greenyellow; */
     padding: 1.15rem;
+    max-width: 90%;
 }
+
+
+.blockquote p::before {
+    content: open-quote;
+}
+
+.blockquote p::after {
+    content: close-quote;
+}
+
+.blockquote {
+    quotes: "“" "”" "‘" "’";
+}
+
+
+.fancy-blockquote {
+    /* padding: 60px 80px 40px; */
+    position: relative;
+    /* quotes: "\201C""\201D""\2018""\2019"; */
+}
+
+.fancy-blockquote::before {
+  position: absolute;
+  /* font-family: "Open-Sans"; */
+  /* font-family: monospace; */
+  top: -315px;
+  right: -15px;
+  
+  content: url(/images/bg-pattern-quotation.svg);
+  opacity: 70%;
+  font-size: 25rem;
+  /* color: var(--moderate-violet-2); */
+   
+}
+
+/* .blockquote::after {
+    content: "";
+    top: 20px;
+    left: 50%;
+    margin-left: -100px;
+    position: absolute;
+    border-bottom: 3px solid #bf0024;
+    height: 3px;
+    width: 200px;
+} */
