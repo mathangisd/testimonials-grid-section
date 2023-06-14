@@ -102,7 +102,7 @@ Card
 .review-card {
     display: grid;
     grid-template-rows: 55px auto auto;
-    grid-template-columns: minmax(350px, 752px);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 752px));
     border-radius: var(--border-radius);
     padding: 1rem;
     
