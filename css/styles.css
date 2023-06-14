@@ -201,7 +201,7 @@ Card
     background-color: var(--dark-blackish-blue);
 }
 
-/* White background card */
+/* White background card*/
 .white-card {
     background: var(--white);
 }
@@ -250,13 +250,10 @@ Media query
 .review-card {
     padding: 1rem;
     grid-template-columns: auto;
-    align-items: start;
     grid-template-rows: 55px 120px auto ;
+    align-items: start;
 }
 
-.blockquote {
-    display: grid;
-}
 .card-title {
     max-width: 100%;
     font-size: 1.95rem;
@@ -265,6 +262,7 @@ Media query
     max-width: 90%;
     align-self: flex-start;
 }
+
 .purple-card {
     grid-area:a
 }
@@ -272,6 +270,7 @@ Media query
 .gray-card {
     grid-area: b;
 }
+
 .white-card-2 {
     grid-area: c;
 }
@@ -299,6 +298,7 @@ Media query
     max-width: 65%;
     
 }
+
 .purple-card .card-title {
     max-width: 90%;
 }
@@ -306,7 +306,6 @@ Media query
 .purple-card .card-details {
     max-width: 95%;
 }
-
 
 .fancy-blockquote::before {
     top: -305px;
@@ -317,4 +316,5 @@ Media query
 .white-card-2 .card-details {
     max-width: 75%;
 }
+
 }
