@@ -74,6 +74,21 @@ body {
     color: hsl(26, 91%, 57%);
 }
 
+.sr-only{
+    border:0; 
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+
 /* 
 =============================
 Card Container
@@ -102,7 +117,7 @@ Card
 .review-card {
     display: grid;
     grid-template-rows: 55px auto auto;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 752px));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 752px));
     border-radius: var(--border-radius);
     padding: 1rem;
     
@@ -250,7 +265,7 @@ Media query
 .review-card {
     padding: 1rem;
     grid-template-columns: auto;
-    grid-template-rows: 55px 120px auto ;
+    grid-template-rows: 55px 150px auto ;
     align-items: start;
 }
 
