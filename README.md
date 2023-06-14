@@ -42,7 +42,7 @@ Users should be able to:
 
 - Solution URL : [Git URL](https://github.com/mathangisd/testimonials-grid-section.git)
 
-- Live URL : [Huddle Landing Page on Netlify](https://testimonials-grid-section-msd.netlify.app/)
+- Live URL : [Testimonials Grid Section on Netlify](https://testimonials-grid-section-msd.netlify.app/)
 
 
 ## My process
