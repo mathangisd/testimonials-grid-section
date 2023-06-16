@@ -103,8 +103,10 @@ main {
 .card-container {
     display:grid;
     row-gap: 30px;
+    grid-auto-columns: minmax(330px, 1fr);
     justify-content: center;
-    margin: 2rem;
+    margin: 2rem auto;
+    width: 85vw;
 }
 
 /*
@@ -115,37 +117,36 @@ Card
 
 /* Generic card style */
 .review-card {
-    display: grid;
-    grid-template-rows: 55px auto auto;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 752px));
     border-radius: var(--border-radius);
-    padding: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     
 }
 
 /* Person */
 .person-details {
     display: flex;
-    margin-top: 2rem;
-    padding-left: 0.75rem;
+    flex: 55px 0 0;
 }
 
 .person-name {
     width: 10rem;
     height: 1rem;
     color: var(--light-gray);
-    font-size: 0.75rem;
+    font-size: 1.25rem;
 }
 
 .person-verification{
     color: var(--light-gray-5);
-    font-size: 0.65rem;
-    margin-top: -0.85rem;
+    font-size: 0.95rem;
+    margin-top: -0.35rem;
 }
 
 .profile-img {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     border: transparent;
     margin-right: 1rem;
@@ -161,18 +162,16 @@ Card
 .card-title {
     color: var(--light-grayish-blue);
     font-size: 1.55rem;
-    margin-top: 0.5rem;
     line-height: 1.35;
-    padding: 0.75rem;
-    max-width: 80%;
+    max-width: 90%;
     font-weight: 600;
 }
 
 /* Testimonial card details */
 .card-details {
     color: var(--light-gray-7);
-    padding: 1.15rem;
     max-width: 90%;
+    margin-top: 0.75rem;
 }
 
 /* Blockquote in testimonial details */
@@ -195,7 +194,7 @@ Card
 
 .fancy-blockquote::before {
     position: absolute;
-    top: -315px;
+    top: -325px;
     right: -15px;
     content: url(/images/bg-pattern-quotation.svg);
     opacity: 70%;
@@ -250,32 +249,49 @@ Media query
 =======================================
 */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 638px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+}
+
+
+@media screen and (min-width: 758px) {
+    .review-card {
+        justify-content: flex-start;
+    }
+}
+@media screen and (min-width: 1280px) {
     
 
 .card-container {
-    grid-template-rows: repeat(2, minmax(350px, 1fr));
+    grid-template-rows: repeat(2, 330px);
     grid-template-columns: repeat(4, minmax(280px, 1fr));
-    gap: 20px;
-    grid-template-areas: 
+    grid-template-areas:
     "a a b c"
     "d e e c ";
+    max-width: 1200px;
+    margin: 2rem auto;
 }
 
 .review-card {
-    padding: 1rem;
+    padding: 2rem;
     grid-template-columns: auto;
-    grid-template-rows: 55px 150px auto ;
+    grid-template-rows: max-content 150px max-content ;
     align-items: start;
+    justify-content: space-around;
 }
 
 .card-title {
     max-width: 100%;
-    font-size: 1.95rem;
+    font-size: 1.55rem;
 }
 .card-details {
-    max-width: 90%;
     align-self: flex-start;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
 }
 
 .purple-card {
@@ -298,38 +314,14 @@ Media query
     grid-area: d;
 }
 
-.gray-card .card-title, .white-card-1 .card-title {
+ .white-card-1 .card-title {
     max-width: 75%;
 }
-.gray-card .card-details, .white-card-1 .card-details {
-    max-width: 90%;
-}
-
-.gray-card .card-title {
-    max-width: 75%;
-}
-
-.gray-card .card-details {
-    max-width: 65%;
-    
-}
-
-.purple-card .card-title {
-    max-width: 90%;
-}
-
-.purple-card .card-details {
-    max-width: 95%;
-}
-
+ 
 .fancy-blockquote::before {
-    top: -305px;
     right: 50px;
-    background-size: 110%;
 } 
 
-.white-card-2 .card-details {
-    max-width: 75%;
-}
+
 
 }
