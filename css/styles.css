@@ -103,9 +103,9 @@ main {
 .card-container {
     display:grid;
     row-gap: 30px;
-    grid-auto-columns: minmax(330px, 1fr);
+    grid-auto-columns: minmax(200px, 1fr);
+    margin-top: 5rem;
     justify-content: center;
-    margin: 2rem auto;
     width: 85vw;
 }
 
@@ -255,72 +255,67 @@ Media query
         gap: 20px;
     }
 
-}
-
-
-@media screen and (min-width: 758px) {
     .review-card {
         justify-content: flex-start;
     }
+
 }
+
+
+
 @media screen and (min-width: 1280px) {
     
+    main{
+        align-items: center;
+        min-height: 100vh;
+    }
 
-.card-container {
-    grid-template-rows: repeat(2, 330px);
-    grid-template-columns: repeat(4, minmax(280px, 1fr));
-    grid-template-areas:
-    "a a b c"
-    "d e e c ";
-    max-width: 1200px;
-    margin: 2rem auto;
-}
+    .card-container {
+        grid-template-rows: repeat(2, 330px);
+        grid-template-columns: repeat(4, minmax(280px, 1fr));
+        grid-template-areas:
+            "a a b c"
+            "d e e c ";
+        max-width: 1200px;
+    }
+    
+    .card-title {
+        max-width: 100%;
+        font-size: 1.55rem;
+    }
+    .card-details {
+        align-self: flex-start;
+        margin-top: 2rem;
+        padding-bottom: 1rem;
+    }
 
-.review-card {
-    padding: 2rem;
-    grid-template-columns: auto;
-    grid-template-rows: max-content 150px max-content ;
-    align-items: start;
-    justify-content: space-around;
-}
+    .purple-card {
+        grid-area:a
+    }
 
-.card-title {
-    max-width: 100%;
-    font-size: 1.55rem;
-}
-.card-details {
-    align-self: flex-start;
-    margin-top: 2rem;
-    padding-bottom: 1rem;
-}
+    .gray-card {
+        grid-area: b;
+    }
 
-.purple-card {
-    grid-area:a
-}
+    .white-card-2 {
+        grid-area: c;
+    }
 
-.gray-card {
-    grid-area: b;
-}
+    .dark-gray-card {
+        grid-area: e;
+    }
 
-.white-card-2 {
-    grid-area: c;
-}
+    .white-card-1 {
+        grid-area: d;
+    }
 
-.dark-gray-card {
-    grid-area: e;
-}
-
-.white-card-1 {
-    grid-area: d;
-}
-
- .white-card-1 .card-title {
-    max-width: 75%;
-}
- 
-.fancy-blockquote::before {
-    right: 50px;
-} 
+    .white-card-1 .card-title {
+        max-width: 75%;
+    }
+    
+    .fancy-blockquote::before {
+        right: 50px;
+    } 
 
 
 
